@@ -302,8 +302,8 @@ textarea.input {
 }
 
 .header ._header-scroll {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 20;
+  padding-bottom: 20;
 }
 
 .header__container {
@@ -501,6 +501,7 @@ body {
           align-items: center;
   padding-top: 15.5rem;
   padding-bottom: 0.875rem;
+  gap: 0.625rem;
 }
 
 .main-block__decore {
@@ -1013,6 +1014,10 @@ body {
     font-size: 0.875rem;
   }
 
+  .main-block__container {
+    padding-top: 15.5rem;
+  }
+
   .main-block__decore_top {
     left: 12.5rem;
   }
@@ -1039,6 +1044,10 @@ body {
 
   .main-block__schedule {
     padding-bottom: 2.375rem;
+  }
+
+  .main-block .clouds-velvet__link {
+    font-size: 2.375rem;
   }
 
   .main-block .schedule-block__date {
@@ -1155,6 +1164,10 @@ body {
     font-size: 0.625rem;
   }
 
+  .main-block__container {
+    padding-top: 7.75rem;
+  }
+
   .main-block__decore_top {
     left: 0.0000000625rem;
   }
@@ -1181,6 +1194,10 @@ body {
 
   .main-block__schedule {
     padding-bottom: 0.9375rem;
+  }
+
+  .main-block .clouds-velvet__link {
+    font-size: 2rem;
   }
 
   .main-block .schedule-block__date {
@@ -1582,6 +1599,18 @@ body {
     }
 }
 
+@supports (padding-top: clamp( 7.75rem , 5.2945544554rem  +  12.2772277228vw , 15.5rem )) {
+    .main-block__container {
+      padding-top: clamp( 7.75rem , 5.2945544554rem  +  12.2772277228vw , 15.5rem );
+    }
+}
+
+@supports not (padding-top: clamp( 7.75rem , 5.2945544554rem  +  12.2772277228vw , 15.5rem )) {
+    .main-block__container {
+      padding-top: calc(7.75rem + 7.75 * (100vw - 20rem) / 63.125);
+    }
+}
+
 @supports (left: clamp( 0.0000000625rem , -3.9603959573rem  +  19.801980099vw , 12.5rem )) {
     .main-block__decore_top {
       left: clamp( 0.0000000625rem , -3.9603959573rem  +  19.801980099vw , 12.5rem );
@@ -1663,6 +1692,18 @@ body {
 @supports not (padding-bottom: clamp( 0.9375rem , 0.4820544554rem  +  2.2772277228vw , 2.375rem )) {
     .main-block__schedule {
       padding-bottom: calc(0.9375rem + 1.4375 * (100vw - 20rem) / 63.125);
+    }
+}
+
+@supports (font-size: clamp( 2rem , 1.8811881188rem  +  0.5940594059vw , 2.375rem )) {
+    .main-block .clouds-velvet__link {
+      font-size: clamp( 2rem , 1.8811881188rem  +  0.5940594059vw , 2.375rem );
+    }
+}
+
+@supports not (font-size: clamp( 2rem , 1.8811881188rem  +  0.5940594059vw , 2.375rem )) {
+    .main-block .clouds-velvet__link {
+      font-size: calc(2rem + 0.375 * (100vw - 20rem) / 63.125);
     }
 }
 
